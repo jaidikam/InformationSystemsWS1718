@@ -445,17 +445,19 @@ auc.perf_treefit_2_3 = performance(pred_treefit_2_3, measure = "auc")
 auc.perf_treefit_3_3 = performance(pred_treefit_3_3, measure = "auc")
 ```
 ## AUC Overview
+
 \begin{table}[]
 \centering
 \caption{AUC for Cox PH, Cox GBM, and Tree model}
 \label{AUC Table 1}
 \begin{tabular}{lllllllll}
 \hline
-\multicolumn{3}{|l|}{Cox PH}                                                    & \multicolumn{3}{l|}{Cox GBM}                                                   & \multicolumn{3}{l|}{Tree}                                                      \\ \hline
-\multicolumn{1}{|l|}{1.3} & \multicolumn{1}{l|}{2.3} & \multicolumn{1}{l|}{3.3} & \multicolumn{1}{l|}{1.3} & \multicolumn{1}{l|}{2.3} & \multicolumn{1}{l|}{3.3} & \multicolumn{1}{l|}{1.3} & \multicolumn{1}{l|}{2.3} & \multicolumn{1}{l|}{3.3} \\ \hline
-auc.perf\_coxph\_1\_3     & auc.perf\_coxph\_2\_3    & auc.perf\_coxph\_3\_3    & auc.perf\_gbmpbc\_1\_3   & auc.perf\_gbmpbc\_2\_3   & auc.perf\_gbmpbc\_3\_3   & auc.perf\_treefit\_1\_3  & auc.perf\_treefit\_2\_3  & auc.perf\_treefit\_3\_3 
+\multicolumn{3}{|l|}{Cox PH}                                                                           & \multicolumn{3}{l|}{Cox GBM}                                                                              & \multicolumn{3}{l|}{Tree}                                                                                    \\ \hline
+\multicolumn{1}{|l|}{1.3}        & \multicolumn{1}{l|}{2.3}         & \multicolumn{1}{l|}{3.3}         & \multicolumn{1}{l|}{1.3}          & \multicolumn{1}{l|}{2.3}          & \multicolumn{1}{l|}{3.3}          & \multicolumn{1}{l|}{1.3}           & \multicolumn{1}{l|}{2.3}           & \multicolumn{1}{l|}{3.3}           \\ \hline
+`r toString(auc.perf_coxph_1_3)` & `r toString(auc.perf_coxph_2_3)` & `r toString(auc.perf_coxph_3_3)` & `r toString(auc.perf_gbmpbc_1_3)` & `r toString(auc.perf_gbmpbc_2_3)` & `r toString(auc.perf_gbmpbc_3_3)` & `r toString(auc.perf_treefit_1_3)` & `r toString(auc.perf_treefit_2_3)` & `r toString(auc.perf_treefit_3_3)`
 \end{tabular}
 \end{table}
+
 
 \begin{table}[]
 \centering
@@ -463,11 +465,12 @@ auc.perf\_coxph\_1\_3     & auc.perf\_coxph\_2\_3    & auc.perf\_coxph\_3\_3    
 \label{AUC Table 2}
 \begin{tabular}{lllllllll}
 \hline
-\multicolumn{3}{|l|}{ATF Weibull}                                                                                                          & \multicolumn{3}{l|}{ATF Exponential}                                                                                        & \multicolumn{3}{l|}{ATF Log}                                                                        \\ \hline
-\multicolumn{1}{|l|}{1.3}                    & \multicolumn{1}{l|}{2.3}                     & \multicolumn{1}{l|}{3.3}                     & \multicolumn{1}{l|}{1.3}                & \multicolumn{1}{l|}{2.3}                & \multicolumn{1}{l|}{3.3}                & \multicolumn{1}{l|}{1.3}        & \multicolumn{1}{l|}{2.3}        & \multicolumn{1}{l|}{3.3}        \\ \hline
-auc.perf\_atf\_model\_weibull\_1\_3@y.values & auc.perf\_atf\_model\_weibull\_2\_3@y.values & auc.perf\_atf\_model\_weibull\_3\_3@y.values & auc.perf\_atf\_model\_exponential\_1\_3 & auc.perf\_atf\_model\_exponential\_2\_3 & auc.perf\_atf\_model\_exponential\_3\_3 & auc.perf\_atf\_model\_log\_1\_3 & auc.perf\_atf\_model\_log\_2\_3 & auc.perf\_atf\_model\_log\_3\_3
+\multicolumn{3}{|l|}{ATF Weibull}                                                                                                                                     & \multicolumn{3}{l|}{ATF Exponential}                                                                                                                   & \multicolumn{3}{l|}{ATF Log}                                                                                                   \\ \hline
+\multicolumn{1}{|l|}{1.3}                             & \multicolumn{1}{l|}{2.3}                              & \multicolumn{1}{l|}{3.3}                              & \multicolumn{1}{l|}{1.3}                         & \multicolumn{1}{l|}{2.3}                         & \multicolumn{1}{l|}{3.3}                         & \multicolumn{1}{l|}{1.3}                 & \multicolumn{1}{l|}{2.3}                 & \multicolumn{1}{l|}{3.3}                 \\ \hline
+`r toString(auc.perf_atf_model_weibull_1_3@y.values)` & `r toString(auc.perf_atf_model_weibull_2_3@y.values)` & `r toString(auc.perf_atf_model_weibull_3_3@y.values)` & `r toString(auc.perf_atf_model_exponential_1_3)` & `r toString(auc.perf_atf_model_exponential_2_3)` & `r toString(auc.perf_atf_model_exponential_3_3)` & `r toString(auc.perf_atf_model_log_1_3)` & `r toString(auc.perf_atf_model_log_2_3)` & `r toString(auc.perf_atf_model_log_3_3)`
 \end{tabular}
 \end{table}
+
 
 ## 4.2. Concordance Index
 The CI is a global index to measure the performance of survival models. When predicting survival times, the output of a model can be interpreted as a ranking based on survival times. The subset of correctly ordered pairs of observations divided by the number of observations that can be ordered results in the CI. 
@@ -806,23 +809,27 @@ CI_tree_model_log_3_3
 \begin{table}[]
 \centering
 \caption{CI for Cox PH, Cox GBM, and Tree model}
-\label{CI Table 1l}
+\label{CI Table 1}
 \begin{tabular}{lllllllll}
 \hline
-\multicolumn{3}{|l|}{Cox PH}                                                    & \multicolumn{3}{l|}{Cox GBM}                                                   & \multicolumn{3}{l|}{Tree}                                                      \\ \hline
-\multicolumn{1}{|l|}{1.3} & \multicolumn{1}{l|}{2.3} & \multicolumn{1}{l|}{3.3} & \multicolumn{1}{l|}{1.3} & \multicolumn{1}{l|}{2.3} & \multicolumn{1}{l|}{3.3} & \multicolumn{1}{l|}{1.3} & \multicolumn{1}{l|}{2.3} & \multicolumn{1}{l|}{3.3} \\ \hline
-                          &                          &                          & CI\_gbmpbc\_1\_3         & CI\_gbmpbc\_2\_3         & CI\_gbmpbc\_3\_3         & CI\_tree\_model\_1\_3    & CI\_tree\_model\_2\_3    & CI\_tree\_model\_3\_3   
+\multicolumn{3}{|l|}{Cox PH}                                                    & \multicolumn{3}{l|}{Cox GBM}                                                            & \multicolumn{3}{l|}{Tree}                                                                           \\ \hline
+\multicolumn{1}{|l|}{1.3} & \multicolumn{1}{l|}{2.3} & \multicolumn{1}{l|}{3.3} & \multicolumn{1}{l|}{1.3}    & \multicolumn{1}{l|}{2.3}    & \multicolumn{1}{l|}{3.3}    & \multicolumn{1}{l|}{1.3}        & \multicolumn{1}{l|}{2.3}        & \multicolumn{1}{l|}{3.3}        \\ \hline
+                          &                          &                          & `r toString(CI_gbmpbc_1_3)` & `r toString(CI_gbmpbc_2_3)` & `r toString(CI_gbmpbc_3_3)` & `r toString(CI_tree_model_1_3)` & `r toString(CI_tree_model_2_3)` & `r toString(CI_tree_model_3_3)`
 \end{tabular}
 \end{table}
 
+
 \begin{table}[]
 \centering
-\caption{CI Table 2}
-\label{CI for ATF Weibull, ATF Exponential, and ATF Log}
+\caption{CI for ATF Weibull, ATF Exponential, and ATF Log}
+\label{CI Table 2}
 \begin{tabular}{lllllllll}
 \hline
-\multicolumn{3}{|l|}{ATF Weibull}                                                             & \multicolumn{3}{l|}{ATF Exponential}                                                                      & \multicolumn{3}{l|}{ATF Log}                                                      \\ \hline
-\multicolumn{1}{|l|}{1.3}     & \multicolumn{1}{l|}{2.3}      & \multicolumn{1}{l|}{3.3}      & \multicolumn{1}{l|}{1.3}          & \multicolumn{1}{l|}{2.3}          & \multicolumn{1}{l|}{3.3}          & \multicolumn{1}{l|}{1.3}  & \multicolumn{1}{l|}{2.3}  & \multicolumn{1}{l|}{3.3}  \\ \hline
-CI\_atf\_model\_weibull\_1\_3 & CI\_atf\_model\_weibull\_2\_3 & CI\_atf\_model\_weibull\_1\_3 & CI\_atf\_model\_exponential\_1\_3 & CI\_atf\_model\_exponential\_2\_3 & CI\_atf\_model\_exponential\_3\_3 & CI\_atf\_model\_log\_1\_3 & CI\_atf\_model\_log\_2\_3 & CI\_atf\_model\_log\_3\_3
+\multicolumn{3}{|l|}{ATF Weibull}                                                                                        & \multicolumn{3}{l|}{ATF Exponential}                                                                                                 & \multicolumn{3}{l|}{ATF Log}                                                                                 \\ \hline
+\multicolumn{1}{|l|}{1.3}              & \multicolumn{1}{l|}{2.3}               & \multicolumn{1}{l|}{3.3}               & \multicolumn{1}{l|}{1.3}                   & \multicolumn{1}{l|}{2.3}                   & \multicolumn{1}{l|}{3.3}                   & \multicolumn{1}{l|}{1.3}           & \multicolumn{1}{l|}{2.3}           & \multicolumn{1}{l|}{3.3}           \\ \hline
+`r toString(CI_atf_model_weibull_1_3)` & `r toString(CI_atf_model_weibull_2_3)` & `r toString(CI_atf_model_weibull_3_3)` & `r toString(CI_atf_model_exponential_1_3)` & `r toString(CI_atf_model_exponential_2_3)` & `r toString(CI_atf_model_exponential_3_3)` & `r toString(CI_atf_model_log_1_3)` & `r toString(CI_atf_model_log_2_3)` & `r toString(CI_atf_model_log_3_3)`
 \end{tabular}
 \end{table}
+
+
+
